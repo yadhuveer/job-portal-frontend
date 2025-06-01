@@ -9,7 +9,7 @@ const ApplicantsGrid = () => {
   
   useEffect(() => {
     // Replace with your actual backend API endpoint
-    axios.get(`http://localhost:3000/applicants/${id}`,{ withCredentials: true })
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/applicants/${id}`,{ withCredentials: true })
       .then(response => {
         setApplicantsArray(response.data.data);
       })

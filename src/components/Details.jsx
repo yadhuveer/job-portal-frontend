@@ -5,6 +5,7 @@ import {useParams} from 'react-router-dom';
 import registerImage from '../assets/register.png';
 const JobDetails = () => {
   const [showForm, setShowForm] = useState(false);
+  
   const {id}=useParams();
   
   const [varJob,setVarJob]= useState({});
@@ -13,7 +14,7 @@ useEffect(()=>{
   const fetchJob = async()=>{
     try{
       console.log(`/viewDetails/${id}`);
-      const response = await fetch(`http://localhost:3000/viewDetails/${id}`);
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/viewDetails/${id}`);
       if(response.ok){
         const data = await response.json();
         setVarJob(data);
@@ -41,7 +42,7 @@ const handleSubmit = async (e) => {
   const formData = new FormData(form);
 
   try {
-    const response = await fetch(`http://localhost:3000/apply/${varJob?.id}`, {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/apply/${varJob?.id}`, {
       method: 'POST',
       body: formData,
     });
@@ -68,7 +69,7 @@ const handleSubmit = async (e) => {
     const result = window.confirm("Are you sure you want to delete this product?");
     if (result) {
       try {
-        const response = await fetch(`http://localhost:3000/delete/${id}`, { method: "POST",credentials: 'include' });
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/delete/${id}`, { method: "POST",credentials: 'include' });
         if (response.ok) {
           console.log("Product deleted successfully");
           window.location.href = '/jobs';

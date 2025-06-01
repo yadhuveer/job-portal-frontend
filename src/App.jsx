@@ -22,14 +22,14 @@ function App() {
    
   useEffect(() => {
     
-    fetch("http://localhost:3000/get-session",{credentials: 'include' })  
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/get-session`,{credentials: 'include' })  
       .then(res => res.json())
      
       .then(data => setUserEmail(data.userEmail));
 
 
 
-       fetch("http://localhost:3000/lastvisit",{credentials: 'include' })  
+       fetch(`${import.meta.env.VITE_BACKEND_URL}/lastvisit`,{credentials: 'include' })  
       .then(res => res.json())
      
       .then(data1 => setLastVisit(data1.lastVist));

@@ -31,7 +31,7 @@ const PostJobForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:3000/postJob', {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/postJob`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formValues),

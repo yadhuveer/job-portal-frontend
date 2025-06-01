@@ -17,7 +17,7 @@ const RegisterForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Replace with actual API call
-    fetch('http://localhost:3000/register', {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

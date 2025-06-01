@@ -6,7 +6,7 @@ function Jobs() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/jobs') 
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/jobs`) 
       .then((res) => res.json())
       .then((data) => setJobs(data.jobs))
       .catch((err) => console.error(err));
