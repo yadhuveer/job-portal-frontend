@@ -1,12 +1,47 @@
-# React + Vite
+# Job Portal Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Job Portal application built with **React** for the frontend and **Express.js** for the backend, enabling job seekers to browse and apply for jobs, and recruiters to post and manage job listings.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Visit the App](job-portal-frontend-rho-lime.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+### 👤 User (Job Seeker)
+- Register and login
+- View all job listings
+- View detailed job descriptions
+- Apply for jobs
+- Track applications
+
+### 🧑‍💼 Recruiter
+- Register and login
+- Post new jobs
+- Edit and delete existing jobs
+- View list of applicants for each job
+- Manage job postings
+
+### ⚙️ Backend (Express.js)
+- RESTful API using Express.js
+- MVC architecture
+- MongoDB for database (if applicable)
+- Session-based authentication
+- Resume upload using Multer
+- Nodemailer integration for confirmation emails
+- Cookie tracking for last visited
+
+---
+
+## 🧱 Tech Stack
+
+| Frontend         | Backend             | Tools / Libs             |
+|------------------|---------------------|---------------------------|
+| React.js         | Node.js, Express.js | Multer, Nodemailer, JWT  |
+| React Router     |                     | dotenv, bcrypt, cookies  |
+| Axios            |                     |                           |
+
+---
+
