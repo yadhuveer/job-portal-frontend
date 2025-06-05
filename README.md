@@ -4,7 +4,7 @@ A full-stack Job Portal application built with **React** for the frontend and **
 
 ## 🔗 Live Demo
 
-Visit the App:[job-portal-frontend-rho-lime.vercel.app](job-portal-frontend-rho-lime.vercel.app)
+Visit the App:[https://job-portal-frontend-rho-lime.vercel.app](https://job-portal-frontend-rho-lime.vercel.app)
 
 ---
 
